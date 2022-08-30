@@ -139,6 +139,7 @@ def index():
 
 @app.route("/callback", methods=['POST'])
 def callback():
+    print('callback')
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
     app.logger.info("Request body: " + body)
